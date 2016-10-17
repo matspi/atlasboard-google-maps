@@ -1,0 +1,29 @@
+{
+
+  "title": "My wallboard title",
+  "titleVisible": false,
+
+  "description": "My first wallboard. This will show up in the dashboard list",
+
+  "layout": {
+      "gridSize" : { "columns" : 4, "rows" : 8 },
+      "customJS" : [],
+      "widgets" : [
+        {"row" : 1, "col" : 1, "width" : 2, "height" : 4, "widget" : "google-maps-route",
+          "job" : "google-maps-route", "config": "munich-to-zurich"},
+          {"row" : 1, "col" : 3, "width" : 2, "height" : 4, "widget" : "google-maps-route",
+            "job" : "google-maps-route", "config": "apple-to-google"}
+      ]
+  },
+
+  "config": {
+      "munich-to-zurich" : {
+        "source" :  "Erika Mann Str. 88, München",
+        "destination" : "Brandschenkestrasse 110, 8002 Zürich"
+      },
+      "apple-to-google" : {
+        "source" :  "1 Infinite Loop, Cupertino",
+        "destination" : "1600 Amphitheatre Parkway, Mountain View, CA 94043"
+      }
+  }
+}
