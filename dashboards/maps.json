@@ -18,10 +18,14 @@
 
   "config": {
       "munich-to-zurich" : {
+        "interval" : 60000,
+        "title" : "Route 1",
         "source" :  "Erika Mann Str. 88, München",
         "destination" : "Brandschenkestrasse 110, 8002 Zürich"
       },
       "apple-to-google" : {
+        "interval" : 60000,
+        "title" : "Route 2",
         "source" :  "1 Infinite Loop, Cupertino",
         "destination" : "1600 Amphitheatre Parkway, Mountain View, CA 94043"
       }
