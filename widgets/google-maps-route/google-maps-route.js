@@ -7,18 +7,35 @@ widget = {
       $('head').append('<script id="google-maps-api-script" src="https://maps.googleapis.com/maps/api/js?key=' + data.globalAuth['google-apis'].maps + '" />');
       return;
     }
+    if (typeof google === 'object' && typeof google.maps === 'object') {
+      if( mapLoaded === false ) {
+        // Google Maps loaded but map net yet initialized
+        var map = new google.maps.Map($(el).find(".map")[0], {
+          disableDefaultUI: true
+        });
 
-    var map = new google.maps.Map($(el).find(".map")[0], {
-      disableDefaultUI: true
-    });
+        google.maps.event.addListener( map, 'idle' function() {
+          
+        });
 
 
-    var trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
+      }
+      else {
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
 
-    var directionsDisplay = new google.maps.DirectionsRenderer({
-      map: map
-    });
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          map: map
+        });
+      }
+    }
+
+      else {
+
+
+      }
+
+
 
     // Set destination, origin and travel mode.
     var request = {
