@@ -4,6 +4,6 @@ In order to get it working, you have to get a Google Maps API key (https://devel
 
 {
   "google-apis": {
-        "maps" : _key in quotes here_
+        "maps" : <key in quotes here>
     }
 }
